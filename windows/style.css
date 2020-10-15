@@ -1,0 +1,1317 @@
+*{
+    margin:0;
+}
+:root {
+    --orange: #ea8a15;
+    --black: #0c0c0c;
+  }
+body{
+    font-family: "Roboto Slab", Sans-serif;
+    overflow-x: hidden;
+}
+/*<div class="header">
+        <div class="header_title">Need Custom Window Treatments?</div>
+        <div class="header_sub">
+            (951) 836-1349
+        </div>
+    </div>
+*/
+.header{
+    width:100vw;
+    height:90px;
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header_title{
+    font-size: large;
+    font-weight: bold;
+}
+.header_sub{
+    font-size: medium;
+    font-weight: bold;
+    color:white;
+}
+/*<div class="nav">
+        <img src="https://www.oawindowfashions.com/wp-content/uploads/2019/07/OALOGOP-1.png" class="nav_logo">
+        <i class="fas fa-bars nav_hamburger"></i>
+    </div>
+*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height:120px;
+    align-items: center;
+    margin:10px 60px;
+}
+.menu_link a{
+    color:gray;
+    text-decoration: none;
+    transition: .5s;
+}
+.nav_logo{
+    height:100px;
+}
+.nav_hamburger{
+    color:var(--black);
+    transition: .5s;
+    font-size: 25px;
+}
+.nav_hamburger:hover{
+    color:var(--orange);
+    cursor: pointer;
+}
+.nav_menu{
+    display:flex;
+}
+.menu_link{
+    margin:0px 20px;
+    color:gray;
+    font-size: 17.5px;
+    transition: .5s;
+}
+.menu_link a:hover{
+    cursor: pointer;
+    color:var(--orange);
+    font-size: 19px;
+}
+/*
+<div class="hero">
+        <div class="hero_title">Window Treatments
+            for your Home</div>
+            <div class="input_container">
+                <div class="input_title">Schedule a Free Consultation</div>
+                <input type="text" class="input_name" placeholder="Name">
+                <input type="text" class="input_email" placeholder="Email">
+                <input type="text" class="input_number" placeholder="Phone Number">
+                <input type="text" class="input_address" placeholder="Address">
+                <button class="input_button">SUBMIT</button>
+            </div>
+    </div>
+*/
+.hero{
+    background: url("https://www.oawindowfashions.com/wp-content/uploads/2019/07/shutter-hero.jpg");
+    height:100vh;
+    width:100vw;
+    object-fit: cover;
+    background-position: center;
+    background-size: 145%;
+    display: flex;
+    flex-direction: column;
+}
+.hero_title{
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    margin:30px 65px;
+    text-shadow: 5px 0px 10px rgba(0,0,0,0.22);
+    opacity: 0;
+    animation: fadeDown .5s forwards;
+    animation-delay: .5s;
+}
+.input_container{
+    height:538px;
+    width:585px;
+    background:linear-gradient(180deg, #ffb56b 0%, #ff962d 100%);
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 0px -5px 10px -12px rgba(0,0,0,0.5);
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
+}
+.input_title{
+    color:white;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+.input_container h1{
+    font-size: large;
+    color:white;
+    margin-top:10px;
+    margin-left:10px;
+}
+.input_container input{
+    height:35px;
+    margin:10px;
+    text-indent: 10px;
+}
+.input_button{
+    background-color: var(--black);
+    color:white;
+    border:none;
+    padding:15px;
+    width:100px;
+    margin-left:10px;
+    margin-top:25px;
+    font-weight: bold;
+    transition: .5s;
+}
+.input_button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+/*
+<div class="pick_card">
+        <div class="pick_title">Pick your look</div>
+        <div class="pick_line"><hr></div>
+        <div class="pick_text">O&A Window Fashions comes to your home when you schedule your free estimate. Pick your look of our many window treatments from shutters, blinds, shades and many more.</div>
+        <img src="https://www.oawindowfashions.com/wp-content/uploads/2019/07/plantation-shutters-1-1024x683.jpg" class="pick_title">
+        <div class="pick_bullet">- Plantation Shutters</div>
+        <button class="pick_button">Learn More</button>
+    </div>
+*/
+.pick_container{
+    display: flex;
+    flex-direction: column;
+    padding:50px 0px;
+}
+.pick_card{
+    display:flex;
+    flex-direction: column;
+    padding:50px 50px;
+}
+.pick_title{
+    font-size: 30px;
+    color:black;
+    font-weight:bold;
+    margin:10px 0px;
+}
+.pick_line hr{
+    background-color: var(--orange);
+    margin:10px 0px;
+    height:3px;
+    width:500px;
+    border:none;
+}
+.pick_text{
+    font-size: 20px;
+    padding-bottom:40px;
+    padding-top:20px;
+}
+.pick_img{
+    height:415px;
+    transition:1s;
+}
+.pick_img:hover{
+    transform: scale(1.1);
+}
+.pick_bullet{
+    margin:20px 0px;
+    font-size: 20px;
+}
+.pick_button{
+    padding:10px;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: var(--black);
+    transition: .5s;
+    border:none;
+    width:150px;
+    margin:10px 0px;
+}
+.pick_button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+/*
+<div class="steps">
+        <div class="steps_title">Three Easy Steps</div>
+        <div class="steps_line"><hr></div>
+        <div class="steps_card">
+            <div class="steps_card_title"><i class="fas fa-phone"></i><h1>SCHEDULE A FREE ESTIMATE</h1></div>
+            <div class="steps_card_text">When you schedule a free estimate we come to your location of business or home. Our sales representative will respond right away once the estimate form is submitted.</div>
+        </div>
+*/
+.steps{
+    background:linear-gradient(to right, rgba(243, 156, 18, .9),rgba(243, 156, 18, .9)), url("https://www.oawindowfashions.com/wp-content/uploads/2019/07/Slider_Image_twinlight.png");
+    color:white;
+    padding-top:50px;
+}
+.steps_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:50px 100px;
+    height:90vh;
+}
+.steps_title{
+    font-size:40px;
+    font-weight: bold;
+}
+.steps_line hr{
+    height:3px;
+    background-color: black;
+    width:100vw;
+    border:none;
+    margin:20px 0px;
+}
+.steps_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:20px 0px;
+}
+.steps_card_title{
+    display: flex;
+    align-items: center;
+}
+.steps_card_title i{
+    color:black;
+    font-size: 40px;
+    margin-right:10px;
+}
+.steps_card_title h1{
+    font-size: 20px;
+}
+.steps_card_text{
+    text-align: center;
+    margin:20px 0px;
+    font-size: 18px;
+}
+/*
+<div class="customers">
+        <div class="customers_number">100</div>
+        <div class="customers_title">Plus Satisfied Customers</div>
+        <div class="customers_social"><i class="fab fa-instagram"></i><i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i></div>
+        <div class="customers_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13249.694407747407!2d-117.65595197093967!3d33.87874270510709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dccf2c4fe10cad%3A0x1c9fc224678e3cfa!2s4218%20Green%20River%20Rd%2C%20Corona%2C%20CA%2092880!5e0!3m2!1sen!2sus!4v1602390400393!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+*/
+.customers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:80vh;
+    padding:75px 50px;
+}
+.customers_number{
+    font-size:65px;
+    font-weight: bolder;
+    color:#ff9430;
+}
+.customers_title{
+    font-size:25px;
+    margin:20px 0px;
+}
+.customers_social i{
+    font-size:40px;
+    margin-bottom:20px;
+    margin-left:5px;
+    margin-right:5px;
+    transition: .1s;
+}
+.customers_social i:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.customers_map{
+    margin-top:50px;
+}
+/*
+<div class="footer">
+        <div class="footer_column">
+            <div class="footer_title">SHUTTERS</div>
+            <div class="footer_link">Plantation Shutters </div>
+            <div class="footer_link">Basswood Shutters </div>
+            <div class="footer_link">Polycore Shutters</div>
+            <div class="footer_link">More Products </div>
+        </div>
+*/
+.footer{
+    display:flex;
+    justify-content: center;
+    background-color:  	#F5F5F5;
+    padding:50px;
+}
+.footer_column{
+    margin:20px;
+}
+.footer_title{
+    font-weight:bold;
+    font-size: 20px;
+    color:#333;
+}
+.footer_link{
+    color:gray;
+    margin:20px 0px;
+}
+.footer_link a{
+    text-decoration: none;
+    color:gray;
+}
+.footer_link:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:600px){
+    .footer_title{
+        font-size: 15px;
+    }
+}
+.pick_title_container{
+    margin-left:50px;
+    margin-right:50px;
+    margin-top:80px;
+    margin-bottom:-50px;
+}
+.pick_text{
+    font-size: 20px;
+}
+@media screen and (min-width:1400px){
+    .hero{
+        flex-direction: row;
+        align-items: center;
+    }
+    .hero_title{
+        font-size: 80px;
+        width:500px;
+        margin-left:200px;
+    }
+    .input_container{
+        margin-left:0px;
+    }
+    .pick_container{
+        flex-direction: row;
+    }
+    .pick_img{
+        height:250px;
+        object-fit: cover;
+    }
+    .pick_bullet{
+        font-size: 15px;
+    }
+    .pick_button{
+        font-size: 10px;
+        width:80px;
+    }
+    .pick_title_container{
+        margin-left:120px;
+        margin-right:120px;
+    }
+    .pick_container{
+        margin-left:70px;
+        margin-right:70px;
+    }
+    .pick_title{
+        font-size: 50px;
+        margin-bottom:20px;
+    }
+    
+}
+@media screen and (max-width:1400px){
+    .hero_title{
+        text-align: center;
+    }
+}
+@media screen and (max-width:1400px){
+    .pick_img{
+        
+    }
+}
+@media screen and (min-width: 900px){
+    .nav_hamburger{
+        display: none;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+ 
+    .steps_container{
+        flex-direction: row;
+        margin-top: -200px;
+    }
+    .steps_card{
+        width:450px;
+        margin-left:10px;
+        margin-right:10px;
+        margin-top:150px;
+    }
+    .steps_title_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .steps{
+        padding:50px;
+        height: 80vh;
+    }
+    
+}
+@media screen and (max-width: 900px){
+    .nav_menu{
+        display: none;
+    }
+    .steps_title{
+        font-size: 30px;
+        text-align: center;
+    }
+    .steps_card_title h1{
+        font-size: 20px;
+    }
+    .steps_card_text{
+        font-size: 15px;
+    }
+
+}
+@media screen and (max-width: 600px){
+   /*<div class="customers_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13249.694407747407!2d-117.65595197093967!3d33.87874270510709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dccf2c4fe10cad%3A0x1c9fc224678e3cfa!2s4218%20Green%20River%20Rd%2C%20Corona%2C%20CA%2092880!5e0!3m2!1sen!2sus!4v1602390400393!5m2!1sen!2sus" width="625" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>*/
+        .customers_map iframe{
+            width:440px;
+        }
+        /*<div class="hero">
+        <div class="hero_title">Window Treatments
+            for your Home</div>
+            <div class="input_container">
+                <div class="input_title">Schedule a Free Consultation</div>
+                <h1>Name</h1>
+                <input type="text" class="input_name" placeholder="Name">
+                <h1>Email</h1>
+                <input type="text" class="input_email" placeholder="Email">
+                <h1>Phone Number</h1>
+                <input type="text" class="input_number" placeholder="Phone Number">
+                <h1>Address</h1>
+                <input type="text" class="input_address" placeholder="Address">
+                <button class="input_button">SUBMIT</button>
+            </div>
+    </div>*/
+}
+@media screen and (max-width:700px){
+    .input_container{
+        width:350px;
+    }
+    .hero_title{
+        text-align: center;
+    }
+    .pick_img{
+        height:300px;
+    }
+}
+
+/*<div class="sub_footer_card">
+            <img src="https://www.oawindowfashions.com/wp-content/uploads/2019/07/bamboo-2.jpg">
+            <h1>Quality</h1>
+        </div>*/
+.sub_footer_card{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom:-5px;
+}
+.sub_footer_card img{
+    filter: brightness(50%);
+    height:200px;
+    width:100vw;
+    object-fit: cover;
+    transition: 1s;
+}
+.sub_footer_card img:hover{
+    filter: brightness(100%);
+}
+.sub_footer_card h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (min-width:900px){
+    .sub_footer{
+        display:flex;
+    }
+    .sub_footer_card{
+        width:30vw;
+    }
+}
+/*
+<div class="sidemenu">
+        <i class="fas fa-window-close"></i>
+        <div class="sidemenu_link">Home</div>
+        <div class="sidemenu_link">About</div>
+        <div class="sidemenu_link">Sales Reps</div>
+        <div class="sidemenu_link">Products</div>
+    </div>
+*/
+.sidemenu{
+    height:100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color:white;
+    background-color: #181818;
+    font-size:25px;
+}
+.sidemenu div{
+    color:white;
+    transition: .5s;
+}
+.sidemenu div a{
+    color:white;
+    text-decoration: none;
+    transition: .5s;
+}
+.sidemenu div a:hover{
+    color:var(--orange);
+    cursor: pointer;
+}
+.sidemenu i{
+    color:white;
+    transition: .5s;
+}
+.sidemenu i:hover{
+    color:var(--orange);
+    cursor: pointer;
+}
+@media screen and (min-width:900px){
+    .pick_img{
+        width:800px;
+    }
+    .pick_container{
+        align-items: center;
+    }
+}
+@media screen and (min-width:1400px){
+    .pick_img{
+        width:300px;
+    }
+}
+/*
+<div class="about_header">
+        <img src="https://www.oawindowfashions.com/wp-content/uploads/2019/07/shutter-hero.jpg">
+        <h1>ABOUT</h1>
+    </div>
+*/
+.about_header{
+    background: url("https://www.oawindowfashions.com/wp-content/uploads/2019/07/shutter-hero.jpg");
+    height:150px;
+    background-position: center;
+    background-size: 100%;
+}
+.about_header h1{
+    text-align: center;
+    color:white;
+    padding-top: 50px;
+    font-size:30px;
+}
+@media screen and (min-width:900px){
+    .about_header{
+        height:350px;
+    }
+    .about_header h1{
+        font-size: 50px;
+        padding-top:130px;
+    }
+}
+/*
+<div class="about_us">
+        <div class="about_us_title">About Us</div>
+        <div class="about_us_line"><hr></div>
+        <div class="about_us_text">
+
+            With 20 years experience from generation to generation. Serving all of our surrounding areas across Orange County, Los Angeles and San Diego. We’re known for being affordable, great quality, fast turn around and offering the best customer service possible. 
+            
+            Always on time, clean and respectful. All the products that we offer are US made. 
+            </div>
+        <div class="about_container">
+            <div class="about_title">5 Star Service</div>
+            <div class="about_stars"></div>
+            <div class="service_container">
+                <div class="service_card">Quality</div>
+                <div class="service_card">Affordable</div>
+                <div class="service_card">On Time</div>
+            </div>
+            <button class="about_button">Get Started</button>
+        </div>
+    </div>
+*/
+.about_us{
+    padding:40px;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
+}
+.about_container{
+    width:85vw;
+    height:300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+}
+.about_title{
+    text-align: center;
+}
+.service_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.service_card{
+    font-size: 15px;
+}
+.about_us_title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+.about_us_line hr{
+    background-color: var(--orange);
+    margin:10px 0px;
+    height:5px;
+    width:200px;
+    border:none;
+    margin-bottom:30px;
+}
+.about_us_text{
+    color: 	#585858;
+    width:400px;
+    font-size: 17px;
+    margin-bottom:30px;
+}
+.about_container{
+    background-color: #191919;
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.about_button{
+    background-color: white;
+    color:var(--orange);
+    font-size: 15px;
+    font-weight: bold;
+    padding:10px 15px;
+    border-radius: 5px;
+    border:none;
+    width:150px;
+    margin-left:auto;
+    margin-right:auto;
+    transition: .5s;
+}
+.about_button:hover{
+    cursor: pointer;
+    background-color: var(--orange);
+    color:white;
+}
+.about_stars{
+    display:flex;
+    justify-content: center;
+}
+.about_stars i{
+    margin:0px 5px;
+    color:var(--orange);
+    font-size: medium;
+}
+.service_card i{
+    color:white;
+}
+@media screen and (min-width:1100px){
+    .about_us{
+        display: flex;
+        flex-direction: row;
+        padding:80px 100px;
+    }
+    .about_us_container{
+        width:80vw;
+        margin-left:100px;
+    }
+    .about_us_title{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:600px){
+    .about_us{
+        padding:50px 25px;
+    }
+    .about_us_container{
+        
+    }
+    .about_us_title{
+        
+    }
+    .service_card{
+        font-size: 15px;
+    }
+}
+
+.sales_header{
+    background: url("https://www.oawindowfashions.com/wp-content/uploads/2019/07/plantation-shutters-hero.jpg");
+    height:150px;
+    background-position: center;
+    background-size: 100%;
+}
+.sales_header h1{
+    text-align: center;
+    color:white;
+    padding-top: 50px;
+    font-size:30px;
+}
+@media screen and (min-width:900px){
+    .sales_header{
+        height:350px;
+    }
+    .sales_header h1{
+        font-size: 50px;
+        padding-top:130px;
+    }
+}
+/*
+ <div class="sales_reps">
+       <div class="reps_title_container">
+       <div class="reps_title">Sale Representatives</div>
+       <div class="reps_line"><hr></div>
+       </div>
+       <div class="reps_container">
+           <div class="rep_card">
+               <h1>Omar A.</h1>
+               <h2>Phone: 951-836-1349</h2>
+               <h2>Email: omar.oawf@gmail.com</h2>
+           </div>
+           <div class="rep_card">
+            <h1>Pablo A.</h1>
+            <h2>Phone: 909-232-7004​</h2>
+            <h2>Email: pablo.oawf@gmail.com​</h2>
+        </div>
+        <div class="rep_card">
+            <h1>Alex R.</h1>
+            <h2>Phone: 951-233-0792​</h2>
+            <h2>Email: alex.oawf@gmail.com​</h2>
+        </div>
+       </div>
+   </div>
+*/
+.sales_reps{
+    display: flex;
+    flex-direction: column;
+    height:65vh;
+    padding:80px 50px;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
+}
+.reps_title{
+    font-size:30px;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+.reps_line hr{
+    background-color: var(--orange);
+    margin:10px 0px;
+    height:5px;
+    width:350px;
+    border:none;
+    margin-bottom:40px;
+}
+.rep_card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:50px;
+}
+.rep_card h1{
+    font-size: 25px;
+    margin-bottom:15px;
+}
+.rep_card h2{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom:5px;
+}
+@media screen and (min-width:900px){
+    .reps_container{
+        flex-direction: row;
+        display: flex;
+    }
+    .rep_card{
+        margin-right:100px;
+        margin-top:30px;
+    }
+    .sales_reps{
+        height:35vh;
+        padding:100px 150px;
+    }
+    .reps_title{
+        font-size: 50px;
+    }
+    .reps_line hr{
+        width:600px;
+    }
+}
+.random_img{
+    background: url("https://www.oawindowfashions.com/wp-content/uploads/2019/07/wood-shutters.jpg");
+    height:200px;
+    background-position: center;
+    background-size: 100%;
+}
+@media screen and (min-width:900px){
+    .random_img{
+        height:300px;
+    }
+}
+
+
+
+.sales_container{
+    height:538px;
+    width:100vw;
+    background:linear-gradient(180deg, #ffb56b 0%, #ff962d 100%);
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 0px -5px 10px -12px rgba(0,0,0,0.5);
+}
+.sales_title{
+    color:white;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+.sales_container h1{
+    font-size: large;
+    color:white;
+    margin-top:10px;
+    margin-left:125px;
+}
+.sales_container input{
+    height:35px;
+    margin:10px;
+    margin-left:125px;
+    text-indent: 10px;
+    width:80vw;
+}
+.sales_button{
+    background-color: var(--black);
+    color:white;
+    border:none;
+    padding:15px;
+    width:100px;
+    margin-left:125px;
+    margin-top:25px;
+    font-weight: bold;
+    transition: .5s;
+}
+.sales_button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+@media screen and (max-width:500px){
+    .sales_container{
+        width:90vw;
+    }
+}
+@media screen and (max-width:1100px){
+    .sales_container h1{
+        margin-left:10px;
+    }
+    .sales_container input{
+        margin-left:10px;
+    }
+    .sales_button{
+        margin-left:10px;
+    }
+}
+@media screen and (min-width:500px){
+    .sales_container{
+        width:93vw;
+    }
+}
+@media screen and (min-width:600px){
+    .sales_container{
+        width:95vw;
+    }
+}
+@media screen and (min-width:900px){
+    .sales_container{
+        width:96vw;
+    }
+}
+@media screen and (min-width:1200px){
+    .sales_container{
+        width:97vw;
+    }
+}
+.products_header{
+    background: url("https://www.oawindowfashions.com/wp-content/uploads/2019/07/products-tab-phone.jpg");
+    height:150px;
+    background-position: center;
+    background-size: 100%;
+}
+.products_header h1{
+    text-align: center;
+    color:white;
+    padding-top: 50px;
+    font-size:30px;
+}
+@media screen and (min-width:900px){
+    .products_header{
+        height:350px;
+    }
+    .products_header h1{
+        font-size: 50px;
+        padding-top:130px;
+    }
+}
+
+/*
+    <div class="our_products">
+        <div class="our_products_title">
+            <h1>Our Products</h1>
+            <hr>
+            <img src="https://www.oawindowfashions.com/wp-content/uploads/2019/07/basswood-shutter.jpg">
+        </div>
+        <div class="our_products_content">
+            <h1>Window treatments for your home.</h1>
+            <div class="card_column">
+            <div class="products_card"><i class="fas fa-circle"></i><h1>Plantation Shutters</h1></div>
+            <div class="products_card"><i class="fas fa-circle"></i><h1>Basswood Shutters</h1></div>
+            <div class="products_card"><i class="fas fa-circle"></i><h1>Polycore Shutters</h1></div>
+            </div>
+            <div class="card_column">
+                <div class="products_card"><i class="fas fa-circle"></i><h1>Roller Shades</h1></div>
+                <div class="products_card"><i class="fas fa-circle"></i><h1>Honeycomb Shades</h1></div>
+                <div class="products_card"><i class="fas fa-circle"></i><h1>Roman Shades</h1></div>
+                </div>
+        </div>
+    </div>
+*/
+
+.products_card{
+    display: flex;
+    align-items: center;
+    margin-bottom:30px;
+}
+.products_card h1 a{
+    color:black;
+}
+.products_card i{
+    color:var(--orange);
+    font-size:10px;
+}
+.card_column{
+    margin-top: 50px;
+}
+.card_columns_container{
+    display: flex;
+}
+.our_products_content{
+    display: flex;
+    flex-direction: column;
+}
+.our_products_content h1{
+    font-weight: lighter;
+    color:gray;
+}
+.products_card h1{
+    font-size: 20px;
+    margin-left:20px;
+    color:black;
+}
+.our_products{
+    display: flex;
+    height:55vh;
+    padding:100px 50px;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
+}
+.our_products_title{
+    display: flex;
+    flex-direction: column;
+    margin-right:50px;
+}
+.our_products_title hr{
+    background-color: var(--orange);
+    margin:10px 0px;
+    height:5px;
+    width:300px;
+    border:none;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+.our_products_title img{
+    height:220px;
+    object-fit: cover;
+}
+@media screen and (max-width:900px){
+    .our_products{
+        flex-direction: column;
+        height:85vh;
+    }
+    .our_products_title img{
+        margin-bottom:20px;
+    }
+    .products_card{
+        margin-left:20px;
+    }
+}
+@media screen and (min-width:900px){
+    .our_products{
+        justify-content: space-evenly;
+    }
+    .products_card i{
+        margin-left:20px;
+    }
+}
+
+/*
+    <div class="our_process">
+        <div class="our_process_container">
+            <div class="our_process_title">Our Process</div>
+            <hr>
+            <div class="our_process_text">
+
+                Our easy process to deliver your new window treatment is our main priority.
+                <br><br>
+                The easy three step process will get your new window shades, blinds or shutters today.
+                </div>
+            <button class="our_process_button">Get Started</button>
+        </div>
+        <img src="https://www.oawindowfashions.com/wp-content/uploads/2019/07/Shutter-Installation.jpg">
+    </div>
+*/
+.our_process{
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+}
+.our_process_container{
+    display: flex;
+    flex-direction: column;
+}
+.our_process_title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.our_process img{
+    width:74vw;
+    object-fit: cover;
+}
+.our_process hr{
+    background-color: var(--orange);
+    margin:10px 0px;
+    height:5px;
+    width:250px;
+    border:none;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+.our_process_text{
+    width:300px;
+}
+.our_process_button{
+    background-color: var(--orange);
+    border:none;
+    color:white;
+    border-radius: 2px;
+    padding:10px;
+    width:100px;
+    margin-top:20px;
+    margin-bottom:30px;
+    transition: .5s;
+}
+.our_process_button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+@media screen and (min-width:900px){
+    .our_process{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .our_process img{
+        width:30vw;
+    }
+}
+@media screen and (max-width:600px){
+    .steps{
+        height:1000px;
+    }
+    .our_process{
+        margin-top:250px;
+    }
+}
+@media screen and (min-width:600px){
+    .our_process{
+        margin-top:170px;
+    }
+}
+
+/*
+<div class="description">
+        <div class="description_title">Plantation Shutters</div>
+        <hr>
+        <div class="description_text">The privacy you need, the unique craftsmanship you deserve. Our variety of selection of plantation shutters are available in many unique designs and finishes, and can be made to fit your new home or business. It is made to fit a variety of windows.</div>
+
+    </div>
+*/
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+}
+.description hr{
+    background-color: var(--orange);
+    margin:20px 0px;
+    height:5px;
+    width:400px;
+    border:none;
+}
+.description_text{
+    text-align: center;
+}
+.description_title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:-10px;
+}
+
+
+.contain {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .item {
+    align-items: center;
+    color: white;
+    display: flex;
+    height: 50vh;
+    object-fit: cover;
+    justify-content: center;
+ }
+ .owl-nav{
+     display:none;
+ }
+ .owl-dots{
+     margin:30px;
+ }
+
+ /*keyframes*/
+ @keyframes fadeUp {
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0) ;
+    }
+} 
+
+@keyframes scale {
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) ;
+    }
+}
+
+@keyframes grow {
+    0%{
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes fadeDown {
+    0%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0) ;
+    }
+} 
+
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes up {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+}
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(90deg, var(--orange) 0%,#515151 100% );
+    animation: spin .5s infinite linear;
+}
+
+.spinner:after {
+    width: 90%;
+    height: 90%;
+    background-color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
